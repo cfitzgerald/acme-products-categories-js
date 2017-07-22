@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.container
+    h1 Acme Products Containers
+    form.well(method='POST' action='/categories')
+      div.form-group
+        input.form-control(name='name' placeholder='enter a category name...')
+      div.form-group
+        button.btn.btn-primary Save
