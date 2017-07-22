@@ -1,0 +1,28 @@
+{
+  "name": "acme-products-categories-js",
+  "version": "1.0.0",
+  "description": "Acme Products: Categories!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfitzgerald/acme-products-categories-js.git"
+  },
+  "author": "Colin FitzGerald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfitzgerald/acme-products-categories-js/issues"
+  },
+  "homepage": "https://github.com/cfitzgerald/acme-products-categories-js#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.2"
+  }
+}
