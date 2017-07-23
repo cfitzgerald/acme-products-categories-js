@@ -5,9 +5,9 @@ module.exports = router;
 
 router.get('/:name/products', (req, res, next) => {
   res.render('products', {
+    category: req.params.name,
     categoryNames: db.getCategoryNames(),
-    products: db.getProductsByCategory(req.params.name),
-    category: req.params.name
+    products: db.getProductsByCategory(req.params.name)
   });
 });
 

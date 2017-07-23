@@ -1,10 +1,8 @@
 extends layout
 
 block content
-  div.container
-    h1 Acme Products Containers
 
-    ul.nav.nav-pills
+    ul.nav.nav-tabs
       li.active
         a(href='/') Home
       each categoryName in categoryNames
@@ -16,4 +14,4 @@ block content
       div.form-group
         input.form-control(name='name' placeholder='enter a CATEGORY name...')
       div.form-group
-        button.btn.btn-primary Save
+        button.btn.btn-primary Add Category

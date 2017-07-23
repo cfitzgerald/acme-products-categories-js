@@ -31,8 +31,6 @@ module.exports = {
     return categories[category];
   },
   createProduct: (product, category) => {
-    // console.log('product = ', product);
-    // console.log('category = ', category);
     if (!product.name) {
       throw new Error('Product name is required!');
     }
@@ -43,17 +41,15 @@ module.exports = {
     categories[category].push(product);
   },
   deleteProduct: (id, category) => {
-    // console.log(categories[category]);
     categories[category] = categories[category].filter(product => {
-      return product.id !== id;
-    }); // it's GETting before the DELETEing
+      return product.id !== Number(id);
+    });
   },
   updateProduct: () => {
 
   },
   deleteCategory: (category) => {
-    // console.log('category = ', category);
-    delete categories[category.name];
+    delete categories[category];
   },
   createCategory: (category) => {
     if (!category.name) {

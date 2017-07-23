@@ -8,9 +8,9 @@ const pug = require('pug');
 
 const app = express();
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static('public')); // use the express.static middleware to get express to serve all the statis files in the dir /public in the project root
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(override('_method')); // use the _method parameter on the url
-app.use(express.static('public')); // use the express.static middleware to get express to serve all the statis files in the dir /public in the project root
 app.use(morgan('dev'));
 
 app.set('views', './views'); // set the 'views' val to specify the dir where the templates will be stored
