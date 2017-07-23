@@ -20,10 +20,10 @@ html(lang='en')
           h1 Acme Products #[small Categories!]
 
         ul.nav.nav-tabs
-          li(class = (navegory === 'home'  ? 'active' : ''))
+          li(class = (navegory === 'home' ? 'active' : ''))
             a(href='/') Home
           each categoryName in categoryNames
-            li(class = (navegory === categoryName  ? 'active' : ''))
+            li(class = (navegory === categoryName ? 'active' : ''))
               a(href='/categories/' + categoryName + '/products') #{categoryName}
 
         block content
