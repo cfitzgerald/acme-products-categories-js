@@ -23,7 +23,7 @@ html(lang='en')
           li(class = (navegory === 'home'  ? 'active' : ''))
             a(href='/') Home
           each categoryName in categoryNames
-            li(class = (category === categoryName  ? 'active' : ''))
+            li(class = (navegory === categoryName  ? 'active' : ''))
               a(href='/categories/' + categoryName + '/products') #{categoryName}
 
         block content
