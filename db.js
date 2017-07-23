@@ -1,23 +1,16 @@
 var categories = {
   'Test Category 1': [
-    {
-      name: 'Test Red',
-      id: 1
-    },
-    {
-      name: 'Test Blue',
-      id: 2
-    }
+    { name: 'Test Red', id: 1 },
+    { name: 'Test Blue', id: 2 }
   ],
   'testCategory2': [
-    {
-      name: 'Test Car',
-      id: 1
-    },
-    {
-      name: 'Test Boat',
-      id: 2
-    }
+    { name: 'Test Car', id: 1 },
+    { name: 'Test Boat', id: 2 }
+  ],
+  'ULTRAPRODUCTS': [
+    { name: 'The Best Product', id: 1 },
+    { name: 'The Absolute Best Product', id: 2 },
+    { name: 'The Very Best Product', id: 3}
   ]
 };
 
@@ -45,9 +38,8 @@ module.exports = {
       return product.id !== Number(id);
     });
   },
-  updateProduct: () => {
-
-  },
+  // updateProduct: () => {
+  // },
   deleteCategory: (category) => {
     delete categories[category];
   },

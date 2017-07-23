@@ -2,18 +2,7 @@ extends layout
 
 block content
 
-    ul.nav.nav-tabs
-      li
-        a(href='/') Home
-      each categoryName in categoryNames
-        if category === categoryName
-          li.active
-            a(href='/categories/' + categoryName + '/products') #{categoryName}
-        else
-          li
-            a(href='/categories/' + categoryName + '/products') #{categoryName}
-
-    h2 #[small Products for:] #{category}
+    h2 #[small Products for Category:] #{category}
     form.well(method='POST')
       div.form-group
         input.form-control(name='name' placeholder='enter a PRODUCT name...')
@@ -22,7 +11,8 @@ block content
 
     ul.list-group
       each product in products
-        li.list-group-item #{product.name}
+        li.list-group-item
+          h4.product-name #{product.name}
           form(method='POST' action='/categories/' + category + '/products/' + product.id + '?_method=DELETE')
             button.btn.btn-warning Delete
 

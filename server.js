@@ -17,7 +17,10 @@ app.set('views', './views'); // set the 'views' val to specify the dir where the
 app.set('view engine', 'pug'); // set the 'view engine' val to specify the template library (pug)
 
 app.get('/', (req, res, next) => {
-  res.render('index', { categoryNames: db.getCategoryNames() });
+  res.render('index', {
+    categoryNames: db.getCategoryNames(),
+    navegory: 'home'
+  });
 });
 
 app.use('/categories', require('./routes/categories'));

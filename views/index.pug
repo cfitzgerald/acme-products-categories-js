@@ -2,13 +2,6 @@ extends layout
 
 block content
 
-    ul.nav.nav-tabs
-      li.active
-        a(href='/') Home
-      each categoryName in categoryNames
-        li
-          a(href='categories/' + categoryName + '/products') #{categoryName}
-
     h2 Home
     form.well(method='POST' action='/categories')
       div.form-group

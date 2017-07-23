@@ -19,4 +19,11 @@ html(lang='en')
         div.page-header
           h1 Acme Products #[small Categories!]
 
+        ul.nav.nav-tabs
+          li(class = (navegory === 'home'  ? 'active' : ''))
+            a(href='/') Home
+          each categoryName in categoryNames
+            li(class = (category === categoryName  ? 'active' : ''))
+              a(href='/categories/' + categoryName + '/products') #{categoryName}
+
         block content
