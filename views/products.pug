@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container
+    h1 Acme Products Containers
+
+    ul.nav.nav-pills
+      li
+        a(href='/') Home
+      each categoryName in categoryNames
+        if category === categoryName
+          li.active
+            a(href='/categories/' + categoryName + '/products') #{categoryName}
+        else
+          li
+            a(href='/categories/' + categoryName + '/products') #{categoryName}
+
+    h2=category
+    form.well(method='POST')
+      div.form-group
+        input.form-control(name='name' placeholder='enter a PRODUCT name...')
+      div.form-group
+        button.btn.btn-primary Save
+
+    ul.list-group
+      each product in products
+        li.list-group-item #{product.name}
+          form(method='POST' action='/categories/' + category + '/products/' + product.id + '?_method=DELETE')
+            button.btn.btn-warning Delete
+
+    form(method='POST' action='/categories/' + category + '?_method=DELETE')
+      button.btn.btn-danger Delete Category
